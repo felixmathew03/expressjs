@@ -4,7 +4,7 @@ import env from "dotenv"
 import router from "./router.js";
 env.config()
 const app=express();
-
+app.use(express.static("template"))
 app.use("/api",router)
 
 connection().then(()=>{
